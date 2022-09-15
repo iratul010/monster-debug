@@ -25,11 +25,7 @@ body {
   font-size: 25px;
   border-radius: 15px;
   background: rgb(255, 255, 255);
-  background: linear-gradient(
-    92.49deg,
-    rgba(255, 255, 255, 0.1) 0.18%,
-    rgba(255, 255, 255, 0.05) 99.85%
-  );
+  background: linear-gradient(92.49deg, rgba(255, 255, 255, 0.1) 0.18%, rgba(255, 255, 255, 0.05) 99.85%);
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
 }
@@ -63,7 +59,7 @@ body {
 }
 #result {
   position: fixed;
-  top: 10%; 
+  top: 10%;
   left: 10%;
   transform: translate(-50%, -50%);
   height: 250px;
@@ -75,7 +71,7 @@ body {
   text-align: center;
   padding: 2rem;
 }
-#show-time{
+#show-time {
   text-align: center;
   color: white;
   margin: 10px 0;
@@ -142,9 +138,9 @@ button {
 }
 
 #histories {
-  display: flex;
+  display: grid;
+  gap: 40px;
   flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 .card {
@@ -152,35 +148,61 @@ button {
   height: 100%;
   padding: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 20px 30px;
   color: white;
   border-radius: 15px;
   background: rgb(255, 255, 255);
-  background: linear-gradient(
-    92.49deg,
-    rgba(255, 255, 255, 0.1) 0.18%,
-    rgba(255, 255, 255, 0.05) 99.85%
-  );
+  background: linear-gradient(92.49deg, rgba(255, 255, 255, 0.1) 0.18%, rgba(255, 255, 255, 0.05) 99.85%);
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 #modal-background {
   background: rgb(255, 255, 255);
-  background: linear-gradient(
-    92.49deg,
-    rgba(255, 255, 255, 0.1) 0.18%,
-    rgba(255, 255, 255, 0.05) 99.85%
-  );
+  background: linear-gradient(92.49deg, rgba(255, 255, 255, 0.1) 0.18%, rgba(255, 255, 255, 0.05) 99.85%);
   backdrop-filter: blur(5px);
   height: 100vh;
   width: 100%;
   position: fixed;
   top: 0;
 }
+/* navbar */
+.nav {
+  margin-top: 50px;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.ul {
+  display: flex;
+  justify-content: flex-end;
 
+  list-style: none;
+}
+.ul li {
+  margin-left: 10px;
+}
+.ul li a:hover {
+  background-color: white;
+  color: black;
+}
+
+.nav-btn {
+  font-size: 24px;
+
+  color: white;
+  text-decoration: none;
+
+  padding: 5px;
+  border-radius: 35px;
+  border: 2px solid #9dffad;
+  transition: 0.3s;
+}
 @media only screen and (max-width: 700px) {
   .box-container {
     padding: 0 20px;
@@ -188,5 +210,12 @@ button {
   }
   .card {
     flex-direction: column;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #histories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
 }
