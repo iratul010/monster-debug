@@ -77,6 +77,56 @@
               </div>
             </div>
           </div>
+          <!-- start -->
+          <div class="accordion-item p-2 bg-dark text-light">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne"
+                aria-expanded="true"
+                aria-controls="panelsStayOpen-collapseOne"
+              >
+                #1 Difference Between Local Storage & Session Storage ?
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="panelsStayOpen-headingOne"
+            >
+              <div class="accordion-body">
+                Local Storage: This read-only interface property provides access to the Document’s local storage object, the
+                stored data is stored across browser sessions. Similar to sessionStorage, except that localStorage data gets
+                cleared when the page session ends – that is when the page is closed. It is cleared when the last “private” tab of
+                a browser is closed (localStorage data for a document loaded in a private browsing or incognito session).
+                <br />
+                <br />
+                <strong> Local storage has 4 methods:</strong> <br />
+                <br />
+                <strong> setItem() Method – </strong> This method takes two parameters one is key and another one is value. It is
+                used to store the value in a particular location with the name of the key. <br />
+                <br />
+                localStorage.setItem(key, value) <br />
+                <br />
+                <strong> getItem() Method – </strong> This method takes one parameter that is key which is used to get the value
+                stored with a particular key name. <br />
+                <br />
+                localStorage.getItem(key) <br />
+                <br />
+                <strong> removeItem() Method – </strong> This is method is used to remove the value stored in the memory in
+                reference to key. localStorage. <br />
+                <br />
+                removeItem(key) <br />
+                <br />
+                <strong>clear() Method – </strong> This method is used to clear all the values stored in localstorage. <br />
+                <br />
+                localStorage.clear()
+              </div>
+            </div>
+          </div>
+          <!-- end -->
           <div class="accordion-item p-2 bg-dark text-light">
             <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
               <button
