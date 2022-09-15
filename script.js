@@ -57,6 +57,7 @@ const validate = (key) => {
   if (key === questionText[userText.length - 1]) {
     return true;
   }
+  errorCount += 1;
   return false;
 };
 
@@ -84,7 +85,7 @@ const gameOver = () => {
     <button onclick="closeModal()">Close</button>
   `;
 
-  addHistory(questionText, timeTaken, ++errorCount);
+  addHistory(questionText, timeTaken, errorCount);
 
   // restart everything
   startTime = null;
